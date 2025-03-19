@@ -67,3 +67,7 @@ fi
 if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
     hash -r 2> /dev/null
 fi
+
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+    auto_deactivate_venv &
+fi
